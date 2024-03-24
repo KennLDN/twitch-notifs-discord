@@ -1,0 +1,5 @@
+node_modules/
+db/store/
+.env
+log.txt
+package-lock.json
