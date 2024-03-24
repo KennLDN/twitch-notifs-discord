@@ -8,8 +8,7 @@ This is a simple discord bot that lets you setup automated notifications when a 
 
 For best results, please use the docker compose included. You can run the application directly, however the /admin stop command will not restart the server, and you must manually install all puppeteer dependencies.
 
-1. Rename .env.example to .env and fill out the fields.
-
-2. `git clone https://github.com/kennldn/twitch-notifs-discord.git`
-
-3. `cd twitch-notifs-discord && docker-compose up --build`
+1. `git clone https://github.com/kennldn/twitch-notifs-discord.git`
+2. `cd twitch-notifs-discord`
+3. Rename .env.example to .env and fill out the fields.
+4. `docker-compose up --build`
