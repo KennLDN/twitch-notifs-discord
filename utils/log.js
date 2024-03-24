@@ -4,7 +4,8 @@ const path = require('path');
 module.exports = (processName) => {
     return {
         add: (msg, status, priority) => {
-            const logMessage = `[${processName}][${status}][${priority}]: ${msg}`;
+            const timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+            const logMessage = `[${timestamp}][${processName}][${status}][${priority}]: ${msg}`;
             console.log(logMessage);
 
             const logFilePath = path.join(__dirname, '..', 'log.txt');
