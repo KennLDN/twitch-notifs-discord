@@ -14,8 +14,8 @@ async function getInfo(username) {
 
         await page.goto(`https://twitch.tv/${username}`, { waitUntil: 'networkidle0' });
 
-        const avatarSelector = `.tw-avatar img[alt="${username}"]`;
-        const avatar = await page.$eval(avatarSelector, img => img.src).catch(() => null);
+        const avatarSelector = `.tw-avatar img[alt="${username}" i]`;
+        const avatar = await page.$eval(avatarSelector, img => img.src).catch(() => null);        
         const streamName = await page.$eval('h2[data-a-target="stream-title"]', h2 => h2.innerText).catch(() => null);
         const game = await page.$eval('a[data-a-target="stream-game-link"] span', span => span.innerText).catch(() => null);
 
